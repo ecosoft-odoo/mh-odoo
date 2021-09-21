@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_payment_check_bbl_base" model="account.payment.check.report">
+        <field name="name">BBL Check</field>
+        <field name="report">mh_print_check.report_check_bbl_base</field>
+    </record>
+</odoo>

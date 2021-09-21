@@ -14,3 +14,69 @@
     - ocb $ODOO_VERSION
     # Example of a merge of the PR with the number <PR>
     # - oca refs/pull/<PR>/head
+
+reporting-engine:
+  defaults:
+    depth: $DEPTH_MERGE
+  remotes:
+    origin: https://github.com/OCA/reporting-engine.git
+  target: origin $ODOO_VERSION
+  merges:
+    - origin $ODOO_VERSION
+
+l10n-thailand:
+  defaults:
+    depth: $DEPTH_MERGE
+  remotes:
+    origin: https://github.com/OCA/l10n-thailand.git
+  target: origin $ODOO_VERSION
+  merges:
+    - origin $ODOO_VERSION
+
+account-payment:
+  defaults:
+    depth: $DEPTH_MERGE
+  remotes:
+    origin: https://github.com/OCA/account-payment.git
+  target: origin $ODOO_VERSION
+  merges:
+    - origin $ODOO_VERSION
+    - origin refs/pull/416/head # account_check_printing_report_base
+    - origin refs/pull/439/head # account_check_date
+    - origin refs/pull/441/head # account_check_payee
+
+# account-financial-reporting:
+#   defaults:
+#     depth: $DEPTH_MERGE
+#   remotes:
+#     origin: https://github.com/OCA/account-financial-reporting.git
+#   target: origin $ODOO_VERSION
+#   merges:
+#     - origin $ODOO_VERSION
+
+# account-financial-tools:
+#   defaults:
+#     depth: $DEPTH_MERGE
+#   remotes:
+#     origin: https://github.com/OCA/account-financial-tools.git
+#   target: origin $ODOO_VERSION
+#   merges:
+#     - origin $ODOO_VERSION
+
+# server-ux:
+#   defaults:
+#     depth: $DEPTH_MERGE
+#   remotes:
+#     origin: https://github.com/OCA/server-ux.git
+#   target: origin $ODOO_VERSION
+#   merges:
+#     - origin $ODOO_VERSION
+
+# server-tools:
+#   defaults:
+#     depth: $DEPTH_MERGE
+#   remotes:
+#     origin: https://github.com/OCA/server-tools.git
+#   target: origin $ODOO_VERSION
+#   merges:
+#     - origin $ODOO_VERSION
