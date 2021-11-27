@@ -1,9 +1,10 @@
 .o_report_check_bbl {
-    font-size: 16px;
+    font-size: 20px;
     font-family: "THSarabunNew";
     .payee_only {
+        font-size: 30px;
         position: fixed;
-        left: 75mm;
+        left: 80mm;
         box-sizing: content-box;
         width: 60mm;
         height: 5mm;
@@ -12,13 +13,13 @@
     @for $i from 0 through 7 {
         .check_date_#{$i} {
             position: fixed;
-            right: 54mm - (7 * $i);
+            right: 42mm - (6 * $i);
         }
     }
     .pay_to {
         position: fixed;
         top: 18mm;
-        left: 25mm;
+        left: 60mm;
         box-sizing: content-box;
         width: 120mm;
         height: 10mm;
@@ -27,20 +28,21 @@
     .bearer {
         position: fixed;
         top: 18mm;
-        right: 3mm;
+        right: 0mm;
     }
     .amount_word {
         position: fixed;
-        top: 30mm;
-        left: 45mm;
+        top: 28mm;
+        left: 70mm;
         box-sizing: content-box;
         width: 110mm;
         height: 10mm;
         padding: 1px;
     }
     .amount {
+        font-size: 25px;
         position: fixed;
-        top: 39mm;
+        top: 36mm;
         right: 27mm;
         box-sizing: content-box;
         width: 60mm;
