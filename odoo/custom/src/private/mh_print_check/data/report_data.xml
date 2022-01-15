@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="paperformat_check_bbl" model="report.paperformat">
-        <field name="name">BBL Check</field>
+        <field name="name">BBL Check (A/C Payee Only)</field>
         <field name="default" eval="True" />
         <field name="format">custom</field>
         <field name="page_height">90</field>
@@ -17,7 +17,7 @@
     </record>
 
     <record id="action_report_check_bbl_base" model="ir.actions.report">
-        <field name="name">BBL Check</field>
+        <field name="name">BBL Check (A/C Payee Only)</field>
         <field name="model">account.payment</field>
         <field name="binding_model_id" ref="account.model_account_payment" />
         <field name="binding_view_types">form</field>
@@ -26,4 +26,35 @@
         <field name="report_file">mh_print_check.report_check_bbl_base</field>
         <field name="paperformat_id" ref="mh_print_check.paperformat_check_bbl" />
     </record>
+
+    <record id="paperformat_check_bbl_no_payee" model="report.paperformat">
+        <field name="name">BBL Check</field>
+        <field name="default" eval="True" />
+        <field name="format">custom</field>
+        <field name="page_height">90</field>
+        <field name="page_width">200</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">3</field>
+        <field name="margin_bottom">3</field>
+        <field name="margin_left">3</field>
+        <field name="margin_right">3</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">3</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <record id="action_report_check_bbl_base_no_payee" model="ir.actions.report">
+        <field name="name">BBL Check</field>
+        <field name="model">account.payment</field>
+        <field name="binding_model_id" ref="account.model_account_payment" />
+        <field name="binding_view_types">form</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">mh_print_check.report_check_bbl_base_no_payee</field>
+        <field name="report_file">mh_print_check.report_check_bbl_base_no_payee</field>
+        <field
+            name="paperformat_id"
+            ref="mh_print_check.paperformat_check_bbl_no_payee"
+        />
+    </record>
+
 </odoo>

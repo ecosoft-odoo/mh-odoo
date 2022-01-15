@@ -18,6 +18,7 @@
         "data/account_payment_check_report_data.xml",
         "data/report_data.xml",
         "report/report_check_bbl_base.xml",
+        "report/report_check_bbl_base_no_payee.xml",
     ],
     "installable": True,
     "maintainers": ["kittiu"],

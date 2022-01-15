@@ -13,7 +13,7 @@
             />
         </xpath>
     </template>
-    <template id="report_check_bbl_base">
+    <template id="report_check_bbl_base_no_payee">
         <t t-call="web.html_container">
             <div class="header" />
             <div class="article">
@@ -21,7 +21,7 @@
                     <t t-set="currency_id" t-value="o.currency_id" />
                     <div class="page o_report_check_bbl">
                         <div style="padding-top:1mm;">
-                            <span class="payee_only">A/C PAYEE ONLY</span>
+                            <span class="payee_only" />
                             <t t-set="check_date" t-value="format_date(o.check_date)" />
                             <span class="check_date_0" t-esc="check_date[0]" />
                             <span class="check_date_1" t-esc="check_date[1]" />
@@ -32,7 +32,7 @@
                             <span class="check_date_6" t-esc="check_date[6]" />
                             <span class="check_date_7" t-esc="check_date[7]" />
                             <span class="pay_to" t-esc="o.check_payee" />
-                            <span class="bearer">//////</span>
+                            <span class="bearer" />
                             <span
                                 class="amount_word"
                                 t-esc="fill_bracket_amount_text(o.amount, currency_id)"
